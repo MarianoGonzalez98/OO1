@@ -1,0 +1,13 @@
+1-
+
+sueldoBasico() de EmpleadoJerarquico 
+sueldoBasico() de Empleado
+montoBasico() de Gerente
+aportes() de gerente
+montoBasico() de gerente
+bonoPorCategoria de empleadoJerarquico
+
+2- 
+aportesDeAlan = 57000 * 0.05 = 2850
+
+sueldoBasicoDeAlan= (57000 + 2850) + 8000 = 67850
