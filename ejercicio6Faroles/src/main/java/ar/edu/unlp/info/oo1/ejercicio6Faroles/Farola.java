@@ -21,9 +21,7 @@ public class Farola {
 	public void pairWithNeighbor( Farola otraFarola ) {
 		if (!vecinas.contains(otraFarola)) { //es evitable el if con una lista???? si, con || ._.
 			vecinas.add(otraFarola);
-			//if (!otraFarola.getNeighbors().contains(this)) { //si no me tiene en sus vecinos, me agrego. Para evitar llamada recursiva?
-				otraFarola.pairWithNeighbor(this);				
-			//}
+			otraFarola.pairWithNeighbor(this);				
 		}
 	}
 	
@@ -34,18 +32,16 @@ public class Farola {
 	
 	//Si la farola no está encendida, la enciende y propaga la acción.
 	public void turnOn() {
-		if (!estado) {
+		if (!isOn()) {
 			estado=true;
 			vecinas.forEach(farola -> farola.turnOn());
 		}
 	}
 	
 	public void turnOff() {
-		if (estado) {
+		if (isOn()) {
 			estado=false;
-			for (Farola farola : vecinas) {
-				farola.turnOff();					
-			}
+			vecinas.forEach(Farola::turnOff);
 		}
 	}
 	
