@@ -19,4 +19,5 @@ public abstract class Pieza {
 	
 	public abstract double getVolumen();
 	public abstract double getSuperficie();
+	// public abstrac boolean esDeMaterial(string material)
 }
