@@ -77,5 +77,6 @@ public class WallPostImpl implements WallPost {
 		esDestacado=!esDestacado;
 	}
 
+	//comentario test
 
 }
