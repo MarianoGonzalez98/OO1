@@ -8,7 +8,7 @@ public class DateLapse2 implements IDateLapse{
 	private int sizeInDays;
 	
 	
-	public DateLapse2(String from, int sizeInDays) {
+	public DateLapse2(String from, int sizeInDays) { //deberia mantener constructor
 		this.from=LocalDate.parse(from);
 		this.sizeInDays=sizeInDays;
 		
