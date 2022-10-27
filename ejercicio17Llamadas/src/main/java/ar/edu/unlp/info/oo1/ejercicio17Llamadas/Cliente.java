@@ -26,9 +26,10 @@ public abstract class Cliente {
 	public Factura facturarLlamadas(String inicio, String fin) {
 		DateLapse periodo= new DateLapse(inicio, fin);
 		double monto = llamadas.stream().filter(l -> l.estaEnPeriodo(periodo)).mapToDouble(l -> l.costo()).sum();
-		return new Factura(periodo,monto);
-		
-		
+		return new Factura(periodo,monto,this);
 	}
 	
+	public boolean tieneTelefono(String telefono) {
+		return this.telefono.equals(telefono);
+	}
 }

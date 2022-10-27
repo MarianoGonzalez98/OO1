@@ -24,4 +24,11 @@ public abstract class Llamada {
 	public abstract double costo();
 	
 	
+	public int getDuracion() {
+		return duracion;
+	}
+	public int getHora() {
+		return hora;
+	}
+	
 }
