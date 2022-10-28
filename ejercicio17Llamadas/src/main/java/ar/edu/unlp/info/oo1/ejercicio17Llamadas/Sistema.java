@@ -54,6 +54,7 @@ public class Sistema {
 		if (cliente==null) { //por si no existe el cliente con ese telefono
 			return null;
 		}
+		//se deberia instanciar la llamada dentro de la clase que la va a conocer
 		Llamada l = new LlamadaLocal(fecha,hora,duracion,telOrigen,telDestino);
 		cliente.registrarLlamada(l);
 		return l;
